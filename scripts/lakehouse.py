@@ -91,7 +91,13 @@ def reset_catalog(name: str = "lab") -> None:
 
     Scoped to `name` on purpose — see `_catalog_dir`.
     """
+    import gc
     import shutil
+
+    # PyIceberg's SQLite catalog can leave a short-lived connection alive on
+    # Windows even when the catalog object was not assigned by the caller.
+    # Collect those temporary objects before removing the scoped directory.
+    gc.collect()
 
     shutil.rmtree(_catalog_dir(name), ignore_errors=True)
 

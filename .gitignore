@@ -17,3 +17,5 @@ notebooks-spark/*.ipynb
 .pytest_cache/
 .venv*/
 _minio-data/
+.pytest-*/
+_lakehouse*/
