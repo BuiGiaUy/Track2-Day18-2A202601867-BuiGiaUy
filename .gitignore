@@ -8,6 +8,7 @@ spark-warehouse/
 metastore_db/
 derby.log
 .venv/
+myenv/
 *.egg-info/
 _lakehouse/
 notebooks/*.ipynb
