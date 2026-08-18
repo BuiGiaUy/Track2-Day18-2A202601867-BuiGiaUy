@@ -1,4 +1,5 @@
 __pycache__/
+.pytest-tmp-codex/
 *.pyc
 .ipynb_checkpoints/
 .DS_Store
